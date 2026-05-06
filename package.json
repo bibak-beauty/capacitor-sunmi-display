@@ -1,5 +1,5 @@
 {
-  "name": "@toptalla/capacitor-sunmi-display",
+  "name": "capacitor-sunmi-display",
   "version": "0.1.0",
   "description": "Android-only Capacitor plugin for rendering HTML on Sunmi dual-screen customer displays.",
   "main": "dist/plugin.cjs.js",
@@ -24,9 +24,6 @@
   },
   "bugs": {
     "url": "https://github.com/bibak-beauty/capacitor-sunmi-display/issues"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "keywords": [
     "capacitor",

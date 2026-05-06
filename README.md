@@ -1,4 +1,4 @@
-# @toptalla/capacitor-sunmi-display
+# capacitor-sunmi-display
 
 Android-only Capacitor plugin for rendering HTML on the customer-facing screen of Sunmi dual-screen POS devices.
 
@@ -7,14 +7,14 @@ The plugin uses the standard Android `DisplayManager` + `Presentation` APIs. It 
 ## Install
 
 ```sh
-npm install @toptalla/capacitor-sunmi-display
+npm install capacitor-sunmi-display
 npx cap sync android
 ```
 
 ## API
 
 ```ts
-import { SunmiDisplay } from '@toptalla/capacitor-sunmi-display';
+import { SunmiDisplay } from 'capacitor-sunmi-display';
 
 const availability = await SunmiDisplay.isSecondaryDisplayAvailable();
 
