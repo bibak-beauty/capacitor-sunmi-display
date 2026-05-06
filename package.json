@@ -1,0 +1,61 @@
+{
+  "name": "@toptalla/capacitor-sunmi-display",
+  "version": "0.1.0",
+  "description": "Android-only Capacitor plugin for rendering HTML on Sunmi dual-screen customer displays.",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "android/settings.gradle",
+    "android/gradle.properties",
+    "android/proguard-rules.pro",
+    "dist/",
+    "LICENSE",
+    "README.md"
+  ],
+  "author": "Toptalla",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibak-beauty/capacitor-sunmi-display.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bibak-beauty/capacitor-sunmi-display/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "sunmi",
+    "dual-screen",
+    "customer-display",
+    "android"
+  ],
+  "scripts": {
+    "verify": "npm run build",
+    "build": "npm run clean && tsc && rollup -c rollup.config.mjs",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "rimraf": "^6.1.0",
+    "rollup": "^4.53.2",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=8.0.0"
+  },
+  "capacitor": {
+    "android": {
+      "src": "android"
+    }
+  }
+}
