@@ -19,6 +19,10 @@ import { SunmiDisplay } from '@toptalla/capacitor-sunmi-display';
 const availability = await SunmiDisplay.isSecondaryDisplayAvailable();
 
 if (availability.available) {
+  await SunmiDisplay.showUrl({
+    url: `${window.location.origin}/customer-display`,
+  });
+
   await SunmiDisplay.showHtml({
     html: '<!doctype html><html><body><h1>Hello customer</h1></body></html>',
     baseUrl: window.location.origin,
@@ -41,6 +45,10 @@ Returns whether Android exposes at least one presentation display.
 ### `showHtml({ html, baseUrl? })`
 
 Shows the secondary display and loads the provided HTML into a WebView. `baseUrl` is optional, but pass your app origin when the HTML references relative assets.
+
+### `showUrl({ url })`
+
+Shows the secondary display and navigates its WebView to the provided absolute URL.
 
 ### `evaluateJavascript({ script })`
 
